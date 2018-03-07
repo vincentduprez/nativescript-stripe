@@ -1,6 +1,7 @@
 const getter = require("utils/utils").ios.getter;
 export class Stripe {
     constructor() { }
+    api() { return getter(STPAPIClient, STPAPIClient.sharedClient); }
     createToken(card: any/*Native Card Instance*/, cb: Function) {
         const apiClient = getter(STPAPIClient, STPAPIClient.sharedClient);
         apiClient.createTokenWithCardCompletion(card, (token: STPToken, error: NSError) => {
