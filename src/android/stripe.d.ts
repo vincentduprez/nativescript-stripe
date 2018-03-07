@@ -2,6 +2,6 @@ export declare class Stripe {
     private _stripe;
     private _ctx;
     constructor(apiKey: string);
-    api();
+    api(): any;
     createToken(card: any, cb: Function): void;
 }
