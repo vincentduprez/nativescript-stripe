@@ -7,6 +7,7 @@ export class Stripe {
         this._ctx = utils.ad.getApplicationContext();
         this._stripe = new com.stripe.android.Stripe(this._ctx, apiKey);
     }
+    api() {return this._stripe}
     createToken(card: any/*Native Card Instance*/, cb: Function) {
         const that = new WeakRef(this);
         this._stripe.createToken(
